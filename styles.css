@@ -1,0 +1,132 @@
+body {
+  margin: 0;
+  font-size: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#container {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr auto;
+  grid-template-areas: 
+      "header"
+      "main"
+      "footer";
+  justify-content: center;
+  justify-items: center;
+  overflow: auto;
+}
+
+#header {
+  grid-area:header;
+  align-self: center;
+}
+
+#main {
+  display: grid;
+  width: 250px;
+  height: 60%;
+  grid-area: main;
+  grid-template-rows: repeat(5, 1fr);
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-areas:
+      "sub-main sub-main sub-main sub-main"
+      "seven eight nine divide"
+      "four five six multiply"
+      "one two three subtract"
+      "zero clear sum add";
+  align-self: center;
+}
+
+#footer {
+  grid-area: footer;
+  height: 100%;
+  align-self: center;
+}
+
+#sub-main {
+  grid-area: sub-main;
+  display: grid;
+  grid-template-rows: 1fr 2fr;
+  grid-template-areas:
+      "display-sub"
+      "display"; 
+}
+
+#display {
+  grid-area: display;
+  text-align: right;
+  border-top: none;
+}
+
+#display-sub {
+  grid-area: display-sub;
+  text-align: right;
+  border-bottom: none;
+  font-size: 10px;
+}
+
+.zero {
+  grid-area: zero;
+}
+
+.one {
+  grid-area: one;
+}
+
+.two {
+  grid-area: two;
+}
+
+.three {
+  grid-area: three;
+}
+
+.four {
+  grid-area: four;
+}
+
+.five {
+  grid-area: five;
+}
+
+.six {
+  grid-area: six;
+}
+
+.seven {
+  grid-area: seven;
+}
+
+.eight {
+  grid-area: eight;
+}
+
+.nine {
+  grid-area: nine;
+}
+
+.add {
+  grid-area: add;
+}
+
+.subtract {
+  grid-area: subtract;
+}
+
+.multiply {
+  grid-area: multiply;
+}
+
+.divide {
+  grid-area: divide;
+}
+
+.sum {
+  grid-area: sum;
+}
+
+.clear {
+  grid-area: clear;
+}
